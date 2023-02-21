@@ -1,5 +1,15 @@
-import 'dotenv/config'
+import { config } from 'dotenv'
 import { z } from 'zod'
+
+
+if(process.env.NODE_ENV === 'test') {
+  //se eu estiver em abient de teste, executar as variaveis do arquivo do path:
+  config({
+    path: '.env.test'
+  })
+} else {
+  config()
+}
 
 //process.env é um objeto
 const envSchema = z.object({
