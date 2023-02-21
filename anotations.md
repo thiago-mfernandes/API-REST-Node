@@ -32,3 +32,9 @@ incluir no package: tsx src/server.ts
 //maior quantidade de testes unitarios na base da piramide
 //alguns testes de integracao 
 //um ou poucos testes e2e
+
+## deploy
+instalar ``npm i tsup -D``
+add scrpt: "build": "tsup src --out-dir build"
+rodar no terminal: node build/server.js e testar pra ver se o codigo esta funcionando
+incluir a pasta build no gitignore
